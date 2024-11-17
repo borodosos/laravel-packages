@@ -79,12 +79,8 @@ return [
     | Kafka message id key name
      */
     'message_id_key' => env('MESSAGE_ID_KEY', 'laravel-kafka::message-id'),
+
     'ssl' => [
         'ca_location' => env('CA_LOCATION', null),
-    ],
-
-    'topics' => [
-        'notification_service_topic' => env('KAFKA_NOTIFICATION_SERVICE_TOPIC', null),
-        // Add more topics here...
     ],
 ];

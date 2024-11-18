@@ -11,7 +11,7 @@ return new class extends Migration {
     public function up(): void {
         Schema::create('spsn_log_kafka_outgoing_messages', function (Blueprint $table) {
             $table->id();
-            $table->string('to_app_service');
+            $table->string('to_app_service')->nullable();
             $table->string('status');
             $table->json('body');
             $table->timestamps();

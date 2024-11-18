@@ -30,7 +30,7 @@ class SpsnKafkaConsumer extends Command {
         $consumer = Kafka::consumer([config('spsn_kafka.consumer.topic')])
             ->withBrokers(config('kafka.brokers'))
             ->withOptions(config('spsn_kafka.consumer.options'))
-            ->withConsumerGroupId(1)
+            ->withConsumerGroupId(config('kafka.consumer_group_id'))
             ->withAutoCommit()
             ->withHandler(function (KafkaMessage $message) {
                 $this->info('Kafka message: ' . $message->getBody() . json_encode($message->getHeaders()));

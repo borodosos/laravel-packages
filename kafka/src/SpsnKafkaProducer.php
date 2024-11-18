@@ -16,6 +16,11 @@ class SpsnKafkaProducer {
     }
 
     public function sendMessage(SpsnKafkaProducerMessage $message) {
-        $this->producer->withMessage($message)->send();
+        return 123;
+        // SpsnKafkaProducerJob::dispatchAfterResponse($message, $this->producer);
+    }
+
+    public function aa() {
+        return 123;
     }
 }

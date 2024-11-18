@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Spsn\Kafka\Constants\MessageTypes\SpsnNotifySrv\SpsnNotifyMessageTypes;
 use Spsn\Kafka\Constants\SpsnAppServiceNames;
 use Spsn\Kafka\Messages\SpsnKafkaProducerMessage;
 use Spsn\Kafka\SpsnKafkaProducer;
@@ -14,8 +15,8 @@ class TestController extends Controller {
         $message = new SpsnKafkaProducerMessage([
             'test' => 'ss',
             'date' => Carbon::now(),
-        ]);
+        ], SpsnNotifyMessageTypes::VERIFY_EMAIL);
 
-        $producer->sendMessage($message);
+        return $producer->sendMessage($message);
     }
 }

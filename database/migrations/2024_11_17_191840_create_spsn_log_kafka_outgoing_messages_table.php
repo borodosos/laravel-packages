@@ -13,6 +13,7 @@ return new class extends Migration {
             $table->id();
             $table->string('to_app_service')->nullable();
             $table->string('status');
+            $table->string('message_id')->nullable();
             $table->json('body');
             $table->timestamps();
         });

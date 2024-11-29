@@ -1,8 +1,6 @@
 <?php
 
-use Spsn\Kafka\Providers\SpsnKafkaProvider;
-
 return [
     App\Providers\AppServiceProvider::class,
-    SpsnKafkaProvider::class,
+    Spsn\Kafka\Providers\SpsnKafkaProvider::class,
 ];

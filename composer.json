@@ -14,7 +14,8 @@
         "laravel/framework": "^11.9",
         "laravel/sanctum": "^4.0",
         "laravel/tinker": "^2.9",
-        "mateusjunges/laravel-kafka": "^2.3"
+        "mateusjunges/laravel-kafka": "^2.3",
+        "spatie/laravel-collection-macros": "^7.14"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",
@@ -30,13 +31,14 @@
             "App\\": "app/",
             "Database\\Factories\\": "database/factories/",
             "Database\\Seeders\\": "database/seeders/",
-            "Spsn\\Kafka\\": "packages/spsn/kafka/src"
+            "Spsn\\Kafka\\": "packages/spsn/kafka/src",
+            "Brds\\LaravelMacros\\": "packages/brds/laravel-macros/src"
         }
     },
     "autoload-dev": {
         "psr-4": {
             "Tests\\": "tests/",
-            "Spsn\\Kafka\\": "packages/spsn/kafka/src"
+            "Brds\\LaravelMacros\\": "packages/brds/laravel-macros/src"
         }
     },
     "scripts": {

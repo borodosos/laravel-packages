@@ -15,6 +15,7 @@ class TestController extends Controller {
         $message = new SpsnKafkaProducerMessage(
             messageType: SpsnNotifyMessageTypes::INVITE_PARTNER,
             message: new SpsnKafkaMessageInvitation(
+                extMessageId: 'ext_message_id',
                 senderOperatorId: 'sender_operator_id',
                 senderId: 'sender_id',
                 senderCountryCode: 'sender_country_code',

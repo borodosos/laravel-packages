@@ -15,6 +15,7 @@
         "laravel/sanctum": "^4.0",
         "laravel/tinker": "^2.9",
         "mateusjunges/laravel-kafka": "^2.3",
+        "spatie/data-transfer-object": "^3.9",
         "spatie/laravel-collection-macros": "^7.14"
     },
     "require-dev": {
